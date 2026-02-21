@@ -31,4 +31,5 @@ export interface ParseStringifiedResult {
   parsed?: unknown;
   error?: string;
   nestingLevel?: number;
+  jsonExtracted?: boolean;
 }
