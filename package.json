@@ -24,6 +24,9 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia",
     "json",
     "formatter",
     "diff",
