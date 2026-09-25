@@ -22,7 +22,8 @@ pnpm:
 ## Quick Start
 
 ```typescript
-import { formatJSON, diffJSON, parseStringified } from '@gagandeep023/json-view';
+import { formatJSON, diffJSON, parseStringified }
+  from '@gagandeep023/json-view';
 
 // Format JSON with 2-space indent
 const result = formatJSON('{"name":"Alice","age":30}');
@@ -54,7 +55,10 @@ Parse and beautify a JSON string with configurable indentation and optional key 
 **Returns:** `FormatResult`
 
 ```typescript
-const result = formatJSON('{"z":3,"a":1}', { indent: 4, sortKeys: true });
+const result = formatJSON('{"z":3,"a":1}', {
+  indent: 4,
+  sortKeys: true,
+});
 // result.success === true
 // result.formatted === '{\n    "a": 1,\n    "z": 3\n}'
 ```
@@ -109,8 +113,13 @@ const diff = diffJSON(
 );
 // diff.hasChanges === true
 // diff.stats === { added: 1, removed: 0, modified: 1 }
-// diff.changes[0] === { path: 'user.name', type: 'modified', oldValue: 'Alice', newValue: 'Bob' }
-// diff.changes[1] === { path: 'user.active', type: 'added', newValue: true }
+// diff.changes[0] === {
+//   path: 'user.name', type: 'modified',
+//   oldValue: 'Alice', newValue: 'Bob',
+// }
+// diff.changes[1] === {
+//   path: 'user.active', type: 'added', newValue: true,
+// }
 ```
 
 ### `flattenDiff(changes)`
